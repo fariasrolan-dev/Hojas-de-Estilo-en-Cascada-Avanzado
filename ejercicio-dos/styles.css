@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #102b46;
+}
+
+/* Contenedor para centrar el cubo */
+.contenedor {
+  perspective: 1000px;
+}
+
+/* Estilo del cubo */
+.prisma {
+  position: relative;
+  width: 260px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-30deg);
+  animation: rotar 5s infinite linear;
+}
+
+/* Estilo para cada cara del cubo */
+.cara {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 150px;
+  margin: -75px 0 0 -130px;
+  background-color: rgba(110, 231, 220, 0.9);
+  border: 2px solid #c4fff6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #102b46;
+  box-sizing: border-box;
+}
+
+/* Prisma rectangular: 260 × 150 × 100 px */
+.frente    { transform: translateZ(50px); }
+.atras     { transform: rotateY(180deg) translateZ(50px); }
+.izquierda,
+.derecha   { width: 100px; margin-left: -50px; }
+.izquierda { transform: rotateY(-90deg) translateZ(130px); }
+.derecha   { transform: rotateY(90deg) translateZ(130px); }
+.arriba,
+.abajo     { height: 100px; margin-top: -50px; }
+.arriba    { transform: rotateX(90deg) translateZ(75px); }
+.abajo     { transform: rotateX(-90deg) translateZ(75px); }
+
+/* Animación de rotación */
+@keyframes rotar {
+  from {
+    transform: rotateX(-30deg) rotateY(-30deg);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(330deg);
+  }
+}
+

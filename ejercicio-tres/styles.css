@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; background: #f1f1f1; font-family: Arial, sans-serif; color: #222; }
+a { position: absolute; top: 24px; left: 24px; color: #222; }
+h1 { font-size: 28px; }
+.triangulo { width: 0; height: 0; border-right: 70px solid transparent; border-bottom: 120px solid #e65b4f; border-left: 70px solid transparent; transition: transform .4s ease; }
+.triangulo:hover { transform: rotate(45deg) scale(1.2); }

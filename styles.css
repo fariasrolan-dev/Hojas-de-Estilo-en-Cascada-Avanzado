@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; background: #f1f1f1; color: #222; font-family: Arial, sans-serif; }
+main { width: min(520px, calc(100% - 40px)); }
+h1 { margin-bottom: 24px; font-size: 30px; }
+nav { display: grid; gap: 12px; }
+a { padding: 16px; border: 1px solid #ccc; border-radius: 6px; background: white; color: #222; text-decoration: none; }
+a:hover { border-color: #e65b4f; }
